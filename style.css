@@ -1,0 +1,28 @@
+body{
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+#NavbarTitle {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.card-img-top {
+    height: auto;
+    width: auto;
+    background-color: black;
+}
+
+h3.card-text{
+    display:inline-block;
+}
+
+h3.crypto-info{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+div.col{
+    margin-top: 50px;
+    margin-left: 20px;
+}
