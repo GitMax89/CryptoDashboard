@@ -40,3 +40,14 @@ wseth.onmessage = (event) => {
     lastPrice = price;
     marketData.style.color = !lastPrice || lastPrice === price ? 'black' : price > lastPrice ? 'green' : 'red';
 }
+
+wsbnb.onmessage = (event) => {
+    let liveBalance = document.getElementById('bnbalance');
+    let bnbMarket = JSON.parse(event.data);
+    let assetType = bnbMarket.s
+    // let updateTime =  new Date(assetType)
+    let price = bnbMarket.p;
+    bnbCap = 2.59103674
+    euroAmmount = bnbCap * price
+    liveBalance.innerHTML = parseFloat(euroAmmount).toFixed(2) 
+}
