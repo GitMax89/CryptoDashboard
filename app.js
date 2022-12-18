@@ -1,4 +1,5 @@
 let wsbnb = new WebSocket('wss://stream.binance.com:9443/ws/bnbeur@trade');
+let livebnb = new WebSocket('wss://stream.binance.com:9443/ws/bnbeur@trade');
 let wsbtc = new WebSocket('wss://stream.binance.com:9443/ws/btceur@trade');
 let wseth = new WebSocket('wss://stream.binance.com:9443/ws/etheur@trade');
 
@@ -41,7 +42,7 @@ wseth.onmessage = (event) => {
     marketData.style.color = !lastPrice || lastPrice === price ? 'black' : price > lastPrice ? 'green' : 'red';
 }
 
-wsbnb.onmessage = (event) => {
+livebnb.onmessage = (event) => {
     let liveBalance = document.getElementById('bnbalance');
     let bnbMarket = JSON.parse(event.data);
     let assetType = bnbMarket.s
